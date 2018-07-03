@@ -282,7 +282,69 @@ public static int day(int month, int day, int year)
 	        int d = (day + x + (31*m)/12) % 7;
 	        return d;
 	    }
+public static int getprime(int i) {
+	int x;
+	
+	
+	for(x=2;x<i;x++)
+	{
+		if(i%x==0)
+		{
+			break;
+		}
+	}
+	if(i==x)
+	{
+		return x;
+	
+	}
 
+	return 0;
+	
+}
+public boolean chackAnageam(String str1, String str2) 
+{
 
+	
+	str1 = str1.replaceAll("\\s" ," ");
+	str2 = str2.replaceAll("\\s" ," ");
+	int  l1 = str1.length( );
+	int  l2 = str2.length( );
+	if( l1 != l2 )
+	{
+		return false;
+       //System.out.println("Please enter equal length string for checking they are angaram or not..");
+	
+	}
+
+	char   arr1[ ] =  str1.toLowerCase().toCharArray();
+	char   arr2[ ] =  str2.toLowerCase().toCharArray();
+	Arrays.sort( arr1 );
+	Arrays.sort( arr2 );
+        
+	
+	
+	if(Arrays.equals(arr1, arr2))
+	{
+	return true;
+	}
+	return false;
+}
+public static int[] getprimeArray()
+{
+int z=0;
+int primes[]=new int[1000];
+	for(int i = 0;i<1000;i++)
+	{ 
+		int x=getprime(i);
+		if(x!=0)
+		{
+		   primes[z]=x;
+		   z++;
+	    }
+	
+	}
+	return primes;
+}
 }
 	
