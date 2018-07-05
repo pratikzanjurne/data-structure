@@ -144,11 +144,7 @@ public class Utility
 		}
 		return Array;
 	}
-	public static String[] getstring()
-			{
-				return null;
-		
-			}
+
 	public void checksumzero(int Array[],int n)
 	{
 		int f=0;
@@ -333,7 +329,7 @@ public boolean chackAnageam(String str1, String str2)
 public static int[] getprimeArray()
 {
 int z=0;
-int primes[]=new int[1000];
+int primes[]=new int[500];
 	for(int i = 0;i<1000;i++)
 	{ 
 		int x=getprime(i);
@@ -346,5 +342,18 @@ int primes[]=new int[1000];
 	}
 	return primes;
 }
+public void writeDataToFile(String nWord)
+{
+	try{
+		File fi=new File("List.txt");
+      	fi.createNewFile();
+      	FileWriter fw=new FileWriter(fi);
+        fw.write(nWord);
+        fw.close();
+	}
+	catch(IOException e){
+	}
 }
+}
+	
 	
