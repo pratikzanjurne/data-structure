@@ -1,10 +1,20 @@
 package com.bridgelabz.utility;
 import java.util.*;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+
 import java.io.*;
+import java.text.SimpleDateFormat;
 
 
 public class Utility 
 {   
+	BufferedReader br;
+	private final String NAME = "<<name>>";
+	private final String FULLNAME = "<<full name>> ";
+	private final String MOBILE_NO = "xxxxxxxxxx";
+	private final String DATE = "12/06/2016";
 	static Random rand = new Random();
 	static Scanner sc=new Scanner(System.in);
 	public static String ipstring() 
@@ -354,6 +364,8 @@ public void writeDataToFile(String nWord)
 	catch(IOException e){
 	}
 }
+
+
 }
 	
 	
